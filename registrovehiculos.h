@@ -1,8 +1,8 @@
-//LibrerÌa de registro
+//Librer√≠a propia para el registro vehicular
 #ifndef registroVehiculos_h
 #define registroVehiculos_h
 
-// Estructura
+// Estructura para veh√≠culo
 typedef struct {
 	char placa[8];
 	char cedula[11];
@@ -23,12 +23,12 @@ typedef struct {
 	int revision1, revision2, revisionActual;
 	int revisionRegistrada;
 	int revisionesAprobadas;
-	// Campos ampliados para revisiones
+	// Campos ampliados para revisiones (Datos adicionales)
 	struct {
 		int puntaje;
 		char fecha[11]; // Formato DD-MM-AAAA
 		float descuentoAplicado; // % de descuento obtenido
-		int aprobada; // 1 si aprobÛ, 0 si no
+		int aprobada; // 1 si aprob√≥, 0 si no
 	} revisionAnterior[2]; // Para las 2 revisiones anteriores
 	float descuentoPorHistorial; // Descuento acumulado por buen historial
 } vehiculo;
